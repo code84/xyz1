@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutell offers a platform to earn a second income by becoming a tutor, while ensuring a brighter future for your child through quality education.">
+    <meta name="keywords" content="tutoring, second income, become a tutor, Tutell, tutor job,home tuition">
+    <meta name="google-site-verification" content="uGvX0hwZnCoVgKpre1OnI_Iz-kIpc-aFx-xqICF77_k" />
+    <title>Tutell</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="image/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        
+        .modal {
+            display: none; 
+            position: fixed;
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 30%; 
+            border-radius: 8px;
+            max-height: 70%; 
+            overflow-y: auto; 
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .terms-content {
+            max-height: 400px; 
+            overflow-y: auto;
+        }
+        
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "url": "https://www.tutell.online",
+  "logo": "https://www.tutell.online/image/favicon-32x32.png"
+}
+</script>
+
+     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16704072128"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16704072128');
+  </script>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="image/photo.png" alt="Tutelllogo" loading="lazy">
+            <div class="title-container">
+                <h1>Tutell !</h1>
+                <p>Platform where you can get quality teachers</p>
+            </div>
+        </div>
+        <div class="header-right">
+            <li style="list-style: none; display: flex; align-items: center;">
+                <a href="https://wa.me/919621585633" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                    <img src="image/pngegg.png" alt="WhatsApp Logo" style="width: 24px; height: 24px; margin-right: 8px;"> 
+                    <span>+91 9621585633</span>
+                </a>
+                <a href="https://wa.me/919250081170" target="_blank" style="text-decoration: none; color: inherit; display: flex; align-items: center;">
+                    <span>+91 9250081170</span> 
+                </a>
+            </li>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="whyus.html">Why Us</a></li>
+            <li><a href="contact.html">About Us</a></li>
+            <li><a href="about.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="text">We Provide you quality Home-tutors in Kanpur</div>
+            <img src="image/schoolboy-sitting-table-drawing.jpg" style="width:100%" loading="lazy">
+            <!-- <div class="text">we Provide best home Tution in kanpur</div> -->
+        </div>
+        <div class="mySlides fade">
+            <img src="image/mother-helping-daughter-study (1).jpg" loading="lazy">
+            <div class="text">Your child's success is our main priority</div>
+        </div>
+        <div class="mySlides fade">
+            <img src="image/Thank You Tutell (1).png" loading="lazy">
+    
+        </div>
+    </div>
+
+   
+    <div class="info-sections">
+        <div class="section parents">
+            <h2>Looking for Tutor</h2>
+            <p>Find the best tutors for your children and track their progress.</p>
+            
+            <form id="tutor-form" class="tutor-form" action="submit"  method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="class">Class:</label>
+                <input type="text" id="class" name="class" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="Location">Your current Address:</label>
+                <input type="loc" id="Location" name="Locality" required>
+
+                <label for="Email">Your Email</label>
+                <input type="Email" id="Email" name="Email" required>
+
+                <button type="submit" >Find Tutor</button>
+            </form>
+            <p id="notification" style="display:none;">We will contact you soon!</p>
+            <script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }    
+    slides[slideIndex - 1].style.display = "block";  
+    setTimeout(showSlides, 3000); // Change slide every 5 seconds
+}
+
+function plusSlides(n) {
+    slideIndex += n;
+    let slides = document.getElementsByClassName("mySlides");
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    if (slideIndex < 1) {
+        slideIndex = slides.length;
+    }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slides[slideIndex - 1].style.display = "block";
+}
+                document.getElementById('tutor-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    const name = document.getElementById('name').value;
+                    const className = document.getElementById('class').value;
+                    const phone = document.getElementById('phone').value;
+                    const location = document.getElementById('Location').value;
+                    const email = document.getElementById('Email').value;
+                    const whatsappNumber = "+919250081170"; 
+                    const message = `Hello, my name is ${name}. I am looking for a tutor for class ${className}. Here are my details: Phone - ${phone}, Location - ${location}, Email - ${email}.`;
+                    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+                    window.location.href = whatsappUrl;
+                });
+            </script>
+        </div>
+        <div class="section teachers">
+    <h2>Become a Home Tutor with Tutell</h2>
+    <p>Are you passionate about teaching and want to make a difference in students' lives? Join our team of dedicated tutors! Fill out the form below to get started.</p>
+    <div class="teacher-query">
+        <h2>What We Offer:</h2>
+        <p>1.Flexible scheduling that fits your availability.</p>
+        <p>2.Opportunities to work with students in your preferred subjects and grade levels.</p>
+        <p>3.Competitive compensation for your expertise</p>
+        <br>
+        <h3>Your Role</h3>
+        <p>As a home tutor with Tutell, you will provide personalized, one-on-one instruction to help students achieve their academic goals. Whether it’s helping with homework, preparing for exams, or deepening their understanding of key concepts, your impact will be invaluable.</p>
+        <button class="register-button"><a href="https://forms.gle/tAs8mbRp5ck6paEz7">Register as a Teacher</a></button>
+    </div>
+</div>
+    </div>
+<div class="teacher-introduction">
+    <h2>Meet Our Teachers</h2>
+    <div class="teacher-list">
+        <div class="teacher-row">
+            <div class="teacher">
+                <div class="teacher-photo">
+                    <img src="image/WhatsApp Image 2024-09-14 at 14.44.58_469f845b.jpg" alt="Teacher 1">
+                </div>
+                <div class="teacher-info">
+                    <h3>Ayush sharma</h3>
+                    <p><strong>Subject:</strong> Math</p>
+                    <p>Experience : 1.5 years</p>
+                </div>
+            </div>
+            <div class="teacher">
+                <div class="teacher-photo">
+                    <img src="image/IMG_7358[1].JPG" alt="Teacher 2">
+                </div>
+                <div class="teacher-info">
+                    <h3>Anchal Mishra</h3>
+                    <p><strong>Subject:</strong> Commerce</p>
+                    <p>Experience : 2 years</p>
+                </div>
+            </div>
+        </div>
+        <div class="teacher-row">
+        <div class="teacher">
+            <div class="teacher-photo">
+                <img src="image/444728144_1392219368145922_1049368547857032807_n.jpg" alt="Teacher 3">
+            </div>
+            <div class="teacher-info">
+                <h3>Kaushik</h3>
+                <p><strong>Subject:</strong> Science</p>
+                <p>Experience : 1.4 years</p>
+            </div>
+        </div>
+        <div class="teacher">
+            <div class="teacher-photo">
+                <img src="image/Untitled design.png" alt="Teacher 3">
+            </div>
+            <div class="teacher-info">
+                <h3>Aditi sharma</h3>
+                <p><strong>Subject:</strong> PCM</p>
+                <p>Experience : 1 years</p>
+            </div>
+        </div>
+
+        </div>
+
+    </div>
+    
+</div>
+
+<div class="footer">
+    <div class="footer-container">
+        <div class="footer-section contact-info">
+            <h3>Have Doubts?</h3>
+            <ul>
+                <li><i class="fas fa-phone"></i> +91 9621585633</li>
+                <li><i class="fas fa-phone"></i> +91 9250081170</li>
+                <li><i class="fas fa-envelope"></i>tutell2024@gmail.com</li>
+                <li><i class="fas fa-map-marker-alt"></i>  Kanpur, Uttar Pradesh 208011</li>
+            </ul>
+        </div>
+        <div class="footer-section links">
+            <h3>Links</h3>
+            <ul>
+                <li><a href="2.html">Home</a></li>
+                <li><a href="#">Searching for home tutor</a></li>
+                <li><a href="https://forms.gle/tAs8mbRp5ck6paEz7">Register As Tutor</a></li>
+                
+                <li><a href="#" id="termsLink">Terms & Condition</a></li>
+            </ul>
+        </div>
+        <div class="footer-section social-media">
+            <h3>Connect With Us</h3>
+            <div class="social-icons">
+               
+                <a href="https://instagram.com/tutell.online/"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright © 2024 All rights reserved</p>
+    </div>
+</div>
+ 
+<div id="termsModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Terms and Conditions</h2>
+        <p>
+            
+           
+1.By using Tutell's tutoring and consulting services, you agree to the outlined Terms and Conditions.
+<br>
+<br>
+2.Services include one-on-one tutoring, group tutoring, test preparation, and academic consulting.
+<br>
+<br>
+3.Sessions are scheduled by mutual agreement, and cancellations require advance notice to avoid fees.
+<br>
+<br>
+4.Payment is due after each session or monthly, with late fees applying to overdue payments.
+<br>
+<br>
+5.Tutors provide professional services as agreed, while clients are responsible for accurate information and timely payments.
+<br>
+<br>
+6.Personal information is kept confidential unless required by law.
+<br>
+<br>
+7.Services can be terminated for breaches of the Terms or misconduct, and liability is limited to connecting tutors and clients.
+<br>
+<br>
+8.The Terms may be updated, and disputes will be resolved through mediation or arbitration.
+<br>
+<br>
+9.We are not liable for any indirect, incidental, or consequential damages arising from the use of our services. Our liability is limited to connecting tutors and clients
+        </p>
+    </div>
+</div>
+
+<script>
+    var modal = document.getElementById("termsModal");
+    var termsLink = document.getElementById("termsLink");
+    var closeButton = document.getElementsByClassName("close")[0];
+    termsLink.onclick = function(event) {
+        event.preventDefault(); 
+        modal.style.display = "block";
+    }
+    closeButton.onclick = function() {
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+    
+</body>
+</html>

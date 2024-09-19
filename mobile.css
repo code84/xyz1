@@ -1,0 +1,556 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.title-container {
+    text-align: left;
+}
+
+.title-container h1 {
+    margin: 0;
+}
+
+.title-container p {
+    margin: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right a {
+    color: rgb(153, 22, 22);
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+@media (max-width: 500px) {
+    
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    
+    .header-right {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .header-right a {
+        margin: 5px 0;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        background-color: orange;
+        color: white;
+    }
+
+   
+    .logo img {
+        height: 40px;
+    }
+
+    
+    nav ul {
+        flex-direction: row; 
+        justify-content: space-around; 
+        padding: 0; 
+    }
+
+    nav ul li {
+        flex: 1;
+        text-align: center; 
+    }
+
+    nav ul li a {
+        padding: 10px 5px; 
+        font-size: 14px; 
+    }
+}
+
+/* mobile */
+nav {
+    background-color: #333;
+    margin-bottom: 20px; 
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+.slideshow-container {
+    max-width: 1600px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 75vh;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+}
+
+.text {
+    color:white;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 20px;
+    position: absolute;
+     bottom: 20px; 
+    left: 15%;
+    margin-left: -10px;
+    transform: translateX(100%);
+    transform: translateY(-300%);
+    text-align: center;
+    font-family: Arial, sans-serif
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+/* mobile */
+@media (max-width: 768px) {
+    .slideshow-container {
+        max-width: 100%; 
+    }
+
+    .mySlides {
+        height: auto; 
+    }
+
+    .mySlides img {
+        width: 100%;
+        height: auto; 
+        object-fit: cover; 
+    }
+
+    .text {
+        font-size: 24px; 
+        padding: 10px; 
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%); 
+    }
+}
+
+.info-sections {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.section {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    min-height: 400px;
+}
+
+.parents {
+    background-color: #d0f0c0; /* Light green */
+}
+
+.teachers {
+    background-color: #d0eaff; /* Light blue */
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+}
+.tutor-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.tutor-form label {
+    font-weight: bold;
+}
+
+.tutor-form input, .tutor-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.tutor-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.tutor-form button {
+    background-color: #f39c12; /* Orange color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tutor-form button:hover {
+    background-color: #e67e22; /* Darker orange */
+}
+.teacher-query {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.teacher-query h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.teacher-query p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+.register-button {
+    background-color: #3498db; /* Blue color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #2980b9; /* Darker blue */
+}
+
+@media (max-width: 768px) {
+    .info-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section {
+        margin: 10px 0; 
+        width: 90%; 
+    }
+
+    .parents, .teachers {
+        min-height: auto; 
+    }
+}
+
+.teacher-introduction {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.teacher-introduction h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.teacher-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start; 
+}
+.teacher-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+.teacher {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensure both sections are the same width */
+    max-width: 700px; /* Adjust the width as needed */
+    height: auto; /* Allow the height to adjust automatically */
+}
+
+.teacher-photo {
+    flex: 0 0 300px; /* Set a fixed width for the photo */
+    margin-right: 20px;
+    height: 200px; /* Set a fixed height to match both sections */
+}
+
+.teacher-photo img {
+    width: 100%;
+    height: 100%; /* Make the image cover the fixed height */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.teacher-info {
+    flex: 1;
+    text-align: left; /* Align text to the left for better readability */
+    font-size: 16px; /* Ensure consistent font size */
+}
+
+
+.teacher-info h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.teacher-info p {
+    margin: 10px 0;
+}
+
+/* mobileview */
+@media (max-width: 768px) {
+    .teacher-list {
+        align-items: center;
+    }
+
+    .teacher-row {
+        flex-direction: column; 
+        gap: 20px; 
+    }
+
+    .teacher {
+        flex-direction: column; /* Stack photo and text vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Center text */
+        padding: 20px; /* Adjust padding for mobile */
+    }
+
+    .teacher-photo {
+        margin: 0 0 10px 0; /* Remove right margin, add bottom margin */
+        width: 100%; /* Make photo responsive */
+        max-width: 300px; /* Limit max width for images */
+        height: auto; /* Allow height to adjust based on width */
+    }
+
+    .teacher-info {
+        text-align: center; /* Center text for mobile view */
+        max-width: 100%; /* Allow text to take full width */
+    }
+
+    /* Adjusting font sizes for mobile view */
+    .teacher-info h3 {
+        font-size: 1.2em; /* Smaller font size for headings */
+    }
+
+    .teacher-info p {
+        font-size: 0.9em; /* Smaller font size for paragraph text */
+    }
+}
+
+
+/* mobileview */
+
+
+
+
+
+.footer {
+    background-color: #1b1b1b;
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li i {
+    margin-right: 10px;
+}
+
+.footer-section.links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-section.links ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.fab {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+}
+
+
+ /* public/style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+}
+
+h1 {
+    color: white;
+}
+
+button {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e67e22;
+}
+/* mobileview */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; 
+        align-items: flex-start; 
+        padding: 0 20px; 
+    }
+
+    .footer-section {
+        padding: 10px 0; 
+        text-align: left; 
+    }
+
+    .footer-section h3 {
+        font-size: 18px;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 8px;
+    }
+
+    .footer-section ul li a {
+        font-size: 14px; 
+    }
+
+    .social-icons a {
+        font-size: 18px;
+        margin-right: 8px; 
+    }
+
+    .footer-bottom {
+        font-size: 14px; 
+        text-align: left; 
+    }
+}
+/* mobileview */

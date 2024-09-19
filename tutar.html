@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutell!</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <link rel="stylesheet" href="tutor.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="image/photo.png" alt="DPS Rohini Logo">
+            <div class="title-container">
+                <h1>Tutell!</h1>
+                <p>Platform where you can get quality teachers</p>
+            </div>
+        </div>
+        <div class="header-right">
+            <button>
+                <a href="#">Login</a>
+            </button>
+            
+        </div>
+        <!-- <img src="https://th.bing.com/th/id/OIP.ZZjUacatctte_AsGnzXVEQHaDV?w=306&h=157&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Background Image" class="background-image"> -->
+    </header>
+    <nav>
+        <ul>
+            <li><a href="2.html">Home</a></li>
+            <li><a href="#">Why This</a></li>
+            <li><a href="contact.html">About Us</a></li>
+            <li><a href="about.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="full-screen-photo">
+    <!-- Add your image in the CSS file -->
+</div>
+<!-- Form Section -->
+<div class="form-container">
+    <h2>Submit Your Details</h2>
+    <form class="tutor-form" action="/submit_form"  method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <label for="Location">Your current Address:</label>
+        <input type="loc" id="Location" name="Locality" required>
+
+        <label for="Email">Your Email</label>
+        <input type="Email" id="Email" name="Email" required>
+
+        <label for="Qualification">Qualification:</label>
+        <input type="text" id="Qualification" name="Qualification" required>
+
+        <!-- /*id card*\ -->
+
+        <div class="id-section">
+            
+            
+            <label for="idType">Choose a Valid ID Card</label>
+            <select id="idType" name="idType" required>
+                <option value="">-- Select ID Card --</option>
+                <option value="aadhaar">Aadhaar Card</option>
+                <option value="pan">PAN Card</option>
+                <option value="driving">Driving License</option>
+            </select>
+        
+            <label for="idNumber">Enter ID Number</label>
+            <input type="text" id="idNumber" name="idNumber" placeholder="Enter ID number" required>
+        
+            <label for="pdfUpload">Upload ID Card (PDF only, max 200KB)</label>
+            <input type="file" id="pdfUpload" name="pdfUpload" accept="application/pdf" required>
+
+            <label for="imgupload">Upload your passport size photo (PDF only, max 200KB)</label>
+            <input type="file" id="imgupload" name="imgupload" accept="image/jpeg, image/png" required>
+
+
+        
+            <div class="error" id="errorMessage"></div>
+        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- /*id card*\ -->
+        <!-- <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea> -->
+        
+        <button type="submit" >Find Tutor</button>
+    </form>
+</div>
+
+</body>
+</html>
